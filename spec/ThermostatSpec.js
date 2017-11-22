@@ -33,9 +33,13 @@ describe('Thermostat', function() {
   });
 
   describe('when power saving mode is on', function() {
-    it('has a maximum temperature of 25 degrees', function() {
+    it('has a maximum temp of 25 degrees when power mode is on', function() {
 
       expect(thermostat.up(6)).toEqual("Soz you are at your max temperature");
     });
+    it('has a maximum temp of 35 degrees when power mode is off', function() {
+    thermostat.savemodeoff();
+    expect(thermostat.up(17)).toEqual("Soz you are at your max temperature");
+   });
   });
 });
