@@ -1,27 +1,41 @@
 'use strict';
 
 function Thermostat(){
-  this.starting_temperature = 20;
+  this.temperature = 20;
   this.on = true;
   this.off = false;
+  this.powerSaveMode = true;
+  this.maxsavemode = 25;
+  this.maxnonsavemode = 32;
+
+
 }
 
+Thermostat.prototype.savemodeon = function(){
+  return this.powerSaveMode = true;
+};
+
+Thermostat.prototype.savemodeoff = function(){
+  return this.powerSaveMode = false;
+};
+
 Thermostat.prototype.up = function(number) {
-  return this.starting_temperature + number;
+  var result = this.temperature + number;
+   if(this.powerSaveMode === true && result > this.maxsavemode){
+    return "Soz you are at your max temperature"
+   }
+   else if(this.powerSaveMode === false && result > this.maxnonsavemode){
+    return "Soz you are at your max temperature"
+   }
+   else {
+     return result;
+   }
 };
 
 Thermostat.prototype.down = function(number){
-  if (this.starting_temperature - number < 10) {
+  if (this.temperature - number < 10) {
    return "Sorry, you'll die"
   } else {
-   return this.starting_temperature - number;
+   return this.temperature - number;
  };
-};
-
-Thermostat.prototype.powermodeon = function(){
-  return this.on;
-};
-
-Thermostat.prototype.powermodeoff = function(){
-  return this.off;
 };
