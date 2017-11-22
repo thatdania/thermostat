@@ -20,6 +20,7 @@ Thermostat.prototype.savemodeoff = function(){
 
 Thermostat.prototype.up = function(number) {
   var result = this.temperature + number;
+  this.usage = number
    if(this.powerSaveMode === true && result > this.maxsavemode){
     return "Soz you are at your max temperature"
    }
@@ -34,7 +35,7 @@ Thermostat.prototype.up = function(number) {
 
 Thermostat.prototype.down = function(number){
   if (this.temperature - number < 10) {
-   return "Sorry, you'll die"
+   return "Sorry, you'll die";
   } else {
    return this.temperature - number;
    this.usage = number
@@ -46,7 +47,11 @@ Thermostat.prototype.reset_temp = function(){
 };
 
 Thermostat.prototype.energy_usage = function(){
-  if(this.usage < 10) {
-    return "low-usage"
+  if(this.usage < 10){
+    return "low-usage";
   }
+  else if(this.usage < 25 && this.usage > 18){
+    return "ok-usage";
+  }
+  return "high-usage";
 };

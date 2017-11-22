@@ -51,5 +51,10 @@ describe('Thermostat', function() {
       thermostat.down(11);
       expect(thermostat.energy_usage()).toEqual("low-usage")
     });
+  
+    it('tempearture is considered ok usage',function(){
+      thermostat.up(10);
+      expect(thermostat.energy_usage()).toEqual("high-usage")
+    });
   });
 });
