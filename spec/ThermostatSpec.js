@@ -23,4 +23,12 @@ describe('Thermostat', function() {
   it("#down temperature cannot be lower than 10 degress", function(){
     expect(thermostat.down(20)).toEqual("Sorry, you'll die");
   });
+
+  it("#powermodeon is true as its on", function(){
+    expect(thermostat.powermodeon()).toBe(true);
+  });
+  it("#powermode off is false as its off", function(){
+    expect(thermostat.powermodeoff()).toBe(false);
+  });
+
 });

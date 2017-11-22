@@ -2,6 +2,8 @@
 
 function Thermostat(){
   this.starting_temperature = 20;
+  this.on = true;
+  this.off = false;
 }
 
 Thermostat.prototype.up = function(number) {
@@ -14,4 +16,12 @@ Thermostat.prototype.down = function(number){
   } else {
    return this.starting_temperature - number;
  };
+};
+
+Thermostat.prototype.powermodeon = function(){
+  return this.on;
+};
+
+Thermostat.prototype.powermodeoff = function(){
+  return this.off;
 };
