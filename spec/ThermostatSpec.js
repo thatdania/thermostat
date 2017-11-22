@@ -41,8 +41,15 @@ describe('Thermostat', function() {
     });
     it('has a maximum temp of 35 degrees when power mode is off', function() {
     thermostat.savemodeoff();
-    expect(thermostat.up(17)).toEqual("Soz you are at your max temperature");
+      expect(thermostat.up(17)).toEqual("Soz you are at your max temperature");
    });
+  });
 
+
+  describe('Thermostat displays unit levels', function(){
+    it('temperature is considered low usage', function(){
+      thermostat.down(11);
+      expect(thermostat.energy_usage()).toEqual("low-usage")
+    });
   });
 });

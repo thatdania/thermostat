@@ -7,8 +7,7 @@ function Thermostat(){
   this.powerSaveMode = true;
   this.maxsavemode = 25;
   this.maxnonsavemode = 32;
-
-
+  this.usage = 0;
 }
 
 Thermostat.prototype.savemodeon = function(){
@@ -29,6 +28,7 @@ Thermostat.prototype.up = function(number) {
    }
    else {
      return result;
+     this.usage = number
    }
 };
 
@@ -37,9 +37,16 @@ Thermostat.prototype.down = function(number){
    return "Sorry, you'll die"
   } else {
    return this.temperature - number;
+   this.usage = number
  };
 };
 
 Thermostat.prototype.reset_temp = function(){
   return this.temperature = 20;
+};
+
+Thermostat.prototype.energy_usage = function(){
+  if(this.usage < 10) {
+    return "low-usage"
+  }
 };
