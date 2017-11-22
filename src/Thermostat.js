@@ -9,5 +9,9 @@ Thermostat.prototype.up = function(number) {
 };
 
 Thermostat.prototype.down = function(number){
-  return this.starting_temperature - number;
+  if (this.starting_temperature - number < 10) {
+   return "Sorry, you'll die"
+  } else {
+   return this.starting_temperature - number;
+ };
 };

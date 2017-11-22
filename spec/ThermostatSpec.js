@@ -19,4 +19,8 @@ describe('Thermostat', function() {
   it("#down decrease the thermostat temperature",function(){
     expect(thermostat.down(10)).toEqual(10);
   });
+
+  it("#down temperature cannot be lower than 10 degress", function(){
+    expect(thermostat.down(20)).toEqual("Sorry, you'll die");
+  });
 });
