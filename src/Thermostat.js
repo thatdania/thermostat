@@ -39,3 +39,7 @@ Thermostat.prototype.down = function(number){
    return this.temperature - number;
  };
 };
+
+Thermostat.prototype.reset_temp = function(){
+  return this.temperature = 20;
+};
