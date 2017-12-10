@@ -1,4 +1,4 @@
-# Thermostat challenge
+# Thermostat challenge 🌡🌡
 
 Although this was a pair-programming challenge, I wanted to test myself to see how far I could get and cement my 
 understanding on javascript for this challenge. My first strategy was to write down the user stories below to 
