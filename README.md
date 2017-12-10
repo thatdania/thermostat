@@ -2,7 +2,7 @@
 
 Although this was a pair-programming challenge, I wanted to test myself to see how far I could get and cement my 
 understanding on javascript for this challenge. My first strategy was to write down the user stories below to 
-set a goal list of what I wanted my thermostat to be. Also, it was first big improvment with CSS. 
+set a goal list of what I wanted my thermostat to be. 
 
 ```
 - Thermostat starts at 20 degrees
