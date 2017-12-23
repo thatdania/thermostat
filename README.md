@@ -19,7 +19,6 @@ cd thermostat
 3. change into the views folders
 ```
 cd views 
-
 ```
 4. run the html file to see the basics of the thermostat
 ```
