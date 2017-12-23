@@ -2,7 +2,39 @@
 
 Although this was a pair-programming challenge, I wanted to test myself to see how far I could get and cement my 
 understanding on javascript for this challenge. My first strategy was to write down the user stories below to 
-set a goal list of what I wanted my thermostat to be. Note: These User stories are in short-form 
+set a goal list of what I wanted my thermostat to be. Note: These User stories are in short-form.
+
+# How to Check it Out
+
+1. Git clone the project 
+```
+git clone https://github.com/thatdania/thermostat.git
+```
+
+2. change into the project directory in the terminal 
+```
+cd thermostat 
+```
+
+3. change into the views folders
+```
+cd views 
+
+```
+4. run the html file to see the basics of the thermostat
+```
+open index.html 
+```
+
+5. check out the test framework and those tests that are accomplished as well 
+```
+cd thermostat
+open SpecRunner.html 
+```
+
+# User Stories: 
+By writing these in short form, it allowed me to start tackling the problem from a small scale.
+Below are all the ones I've completed. 
 
 ```
 - Thermostat starts at 20 degrees
